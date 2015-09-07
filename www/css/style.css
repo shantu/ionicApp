@@ -1,0 +1,72 @@
+/* Empty. Add your own CSS if you like */
+#fhm_page .scroll,
+.fhm_container {
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+}
+
+.fhm_row {
+  /* position: absolute; */
+  height: 33.3%;
+  left:0;
+  right:0;
+  background-color:#FF0000;
+  clear:both;
+}
+.fhm_item {
+ /* height: 100%;
+  width:49.95%;*/
+  background-color: #00FF00;
+  border: 1px solid #FFFFFF;
+  float:left;
+}
+.larger:before  {
+    font-size: 42px !important;
+}
+.menuItems {
+	padding: 10% 0%;
+}
+
+#blog-badge {
+  display: none;
+  position: absolute;
+  padding: 3px 6px;
+  border-radius: 64px;
+  border: 2px solid #FFF;
+  width: 21px;
+  background: #D55757;
+  color: #FFF;
+  right: 6px;
+  top: 15px;
+  text-align: center;
+  z-index: 1;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 11px; 
+  }
+ .trns {
+	border-color: rgba(0, 0, 0, 0);
+	background-color: rgba(0, 0, 0, 0);
+	color: white !important; 
+}
+.login-input {
+	border: 1px solid #FFFFFF;
+	background-color: rgba(0, 0, 0, 0);
+	color: white !important;
+}
+.login-input > input {
+	color: white !important;
+}
+.banner {
+background: rgba(73,155,234,1);
+background: -moz-linear-gradient(45deg, rgba(73,155,234,1) 0%, rgba(8,78,153,1) 100%);
+background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(73,155,234,1)), color-stop(100%, rgba(8,78,153,1)));
+background: -webkit-linear-gradient(45deg, rgba(73,155,234,1) 0%, rgba(8,78,153,1) 100%);
+background: -o-linear-gradient(45deg, rgba(73,155,234,1) 0%, rgba(8,78,153,1) 100%);
+background: -ms-linear-gradient(45deg, rgba(73,155,234,1) 0%, rgba(8,78,153,1) 100%);
+background: linear-gradient(45deg, rgba(73,155,234,1) 0%, rgba(8,78,153,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#084e99', GradientType=1 );
+}
