@@ -1,6 +1,7 @@
-angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+var IonicDemoApp = angular.module('starter.controllers', ['starter.services'])
+
+IonicDemoApp.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -41,7 +42,22 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('NotificationsCtrl', function($scope) {
+IonicDemoApp.controller('NotificationsCtrl', function($scope, restServices) {
+	
+	$scope.isWait = false;
+	$scope.loadOrders = function() {
+		console.log("Inside NotificationCtrl...");
+		var response = restServices.getOrders();
+		response.success(function(data) {
+			$scope.notifications = data;
+			$scope.isWait = true;			
+		});
+		response.error(function(data, status) {
+			$scope.isWait = true;
+			alert("Failed to retrive error list");
+		});
+	};
+	/*
   $scope.notifications = [
     { title: 'Reggae', id: 1 },
     { title: 'Chill', id: 2 },
@@ -50,7 +66,8 @@ angular.module('starter.controllers', [])
     { title: 'Rap', id: 5 },
     { title: 'Cowbell', id: 6 }
   ];
+  */
 })
 
-.controller('NotificationCtrl', function($scope, $stateParams) {
+IonicDemoApp.controller('NotificationCtrl', function($scope, $stateParams) {
 });
