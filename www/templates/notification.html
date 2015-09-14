@@ -1,5 +1,15 @@
-<ion-view view-title="Notification">
-  <ion-content>
-    <h1>Notification</h1>
+<ion-view view-title="Order Details">
+  <ion-content ng-init="loadOrderDetails()">
+    <h1>Order Details</h1>
+	<ion-list>
+        <label>OrderID:</label>	{{OrderID}}<br>
+		<label>MembershipBusinessName</label>	{{MembershipBusinessName}}<br>
+		
+		<ion-item ng-repeat="order in orderdetails">
+		<label>ItemDesc</label>	{{order.ItemDesc}}<br>
+		<label>Quantity:</label>{{order.Quantity}}<br>
+		<label>Price:</label>	{{order.Price}}<br>		
+		</ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>

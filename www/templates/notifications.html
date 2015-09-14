@@ -1,8 +1,10 @@
-<ion-view view-title="Notifications">
+<ion-view view-title="Orders">
   <ion-content ng-init="loadOrders()">
     <ion-list>
-      <ion-item ng-repeat="notification in notifications" href="#/app/notifications/{{notification.id}}">
-        {{notification.title}}
+      <ion-item ng-repeat="notification in notifications" href="#/app/notifications/{{notification.OrderID}}">
+        <label>OrderID:</label>{{notification.OrderID}}<br>
+		<label>OrderDate:</label>{{notification.OrderDate}}<br>
+		<label>MembershipID:</label>{{notification.MembershipID}}<br>
       </ion-item>
     </ion-list>
   </ion-content>

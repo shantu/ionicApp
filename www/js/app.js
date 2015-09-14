@@ -79,7 +79,7 @@ IonicDemoApp.config(function($stateProvider, $urlRouterProvider) {
 		views: {
 			'menuContent': {
 				templateUrl: 'templates/notifications.html',
-				controller: 'NotificationsCtrl'
+				controller: 'OrdersCtrl'
 			}
 		}
     })
@@ -89,7 +89,7 @@ IonicDemoApp.config(function($stateProvider, $urlRouterProvider) {
 		views: {
   		    'menuContent': {
 				templateUrl: 'templates/notification.html',
-				controller: 'NotificationCtrl'
+				controller: 'OrderDetailsCtrl'
 			}
 		}
 	});

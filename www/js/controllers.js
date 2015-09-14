@@ -42,11 +42,11 @@ IonicDemoApp.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
   };
 })
 
-IonicDemoApp.controller('NotificationsCtrl', function($scope, restServices) {
+IonicDemoApp.controller('OrdersCtrl', function($scope, restServices) {
 	
 	$scope.isWait = false;
 	$scope.loadOrders = function() {
-		console.log("Inside NotificationCtrl...");
+		console.log("Inside Orders Ctrl...");
 		var response = restServices.getOrders();
 		response.success(function(data) {
 			$scope.notifications = data;
@@ -54,7 +54,7 @@ IonicDemoApp.controller('NotificationsCtrl', function($scope, restServices) {
 		});
 		response.error(function(data, status) {
 			$scope.isWait = true;
-			alert("Failed to retrive error list");
+			console.log("Failed to retrive order list");
 		});
 	};
 	/*
@@ -69,5 +69,22 @@ IonicDemoApp.controller('NotificationsCtrl', function($scope, restServices) {
   */
 })
 
-IonicDemoApp.controller('NotificationCtrl', function($scope, $stateParams) {
+IonicDemoApp.controller('OrderDetailsCtrl', function($scope, restServices, $stateParams) {
+	$scope.isWait = false;
+	$scope.loadOrderDetails = function() {
+		console.log("Inside OrderDetails Ctrl...");
+		
+		$scope.OrderID = "11060357";
+		$scope.MembershipBusinessName = "K NAGA RAJU";
+		
+		var response = restServices.getOrderDetails();
+		response.success(function(data) {
+			$scope.orderdetails = data;
+			$scope.isWait = true;			
+		});
+		response.error(function(data, status) {
+			$scope.isWait = true;
+			console.log("Failed to retrive order list");
+		});
+	};	
 });
