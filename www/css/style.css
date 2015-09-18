@@ -70,3 +70,5 @@ background: -ms-linear-gradient(45deg, rgba(73,155,234,1) 0%, rgba(8,78,153,1) 1
 background: linear-gradient(45deg, rgba(73,155,234,1) 0%, rgba(8,78,153,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#084e99', GradientType=1 );
 }
+.logo {
+	text-align: center;

@@ -22,21 +22,6 @@ IonicDemoApp.run(function($ionicPlatform) {
   });
 });
 
-/*
-IonicDemoApp.config(function($routeProvider) {
-	$routeProvider
-		.when("/home", {
-			  templateUrl: "partials/home.html",
-			  controller: 'globalCtrl'
-		})
-		.when("/login", {
-			  templateUrl: "partials/login.html",
-  		  controller: 'globalCtrl'
-		})		
-		.otherwise({redirectTo: '/login'});
-	});
-	*/
-	
 IonicDemoApp.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
@@ -65,6 +50,16 @@ IonicDemoApp.config(function($stateProvider, $urlRouterProvider) {
 		}
 	})
 
+	.state('app.login', {
+		url: '/login',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/login.html',
+				controller: 'AppCtrl'
+			}
+		}
+	})
+	
 	.state('app.browse', {
 		url: '/browse',
 		views: {
@@ -95,5 +90,5 @@ IonicDemoApp.config(function($stateProvider, $urlRouterProvider) {
 	});
 	
 	// if none of the above states are matched, use this as the fallback
-	$urlRouterProvider.otherwise('/app/dashboard');
+	$urlRouterProvider.otherwise('/app/login');
 });

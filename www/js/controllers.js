@@ -1,7 +1,7 @@
 
 var IonicDemoApp = angular.module('starter.controllers', ['starter.services'])
 
-IonicDemoApp.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+IonicDemoApp.controller('AppCtrl', function($scope, $ionicModal, $timeout ,$state) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -30,6 +30,10 @@ IonicDemoApp.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
     $scope.modal.show();
   };
 
+  $scope.close = function(data) { 
+		$state.go('app.dashboard');
+  };
+  
   // Perform the login action when the user submits the login form
   $scope.doLogin = function() {
     console.log('Doing login', $scope.loginData);
@@ -41,7 +45,6 @@ IonicDemoApp.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
     }, 1000);
   };
 })
-
 IonicDemoApp.controller('OrdersCtrl', function($scope, restServices) {
 	
 	$scope.isWait = false;

@@ -1,4 +1,4 @@
-<ion-modal-view class="banner">
+<ion-view hide-nav-bar="true" class="banner">
   <ion-header-bar class="bar-clear">
      <h1 class="title">Login</h1>
    <!--<div class="buttons">
@@ -6,11 +6,11 @@
     </div>-->
   </ion-header-bar>
   
-  <ion-content>
+  <ion-content has-header="false">
   <br>
 <div class="row">
   <div class="col"></div>
-  <div class="col">
+  <div class="col logo">
 		<img src="img/ionic.png">
   </div>
   <div class="col"></div>
@@ -28,10 +28,10 @@
 		</label>
 		<br>
 		<br>
-		<button class="button button-block button-light" type="submit">
+		<button class="button button-block button-light" ng-click="close()">
 			 Sign in
 		</button>
 	</div>
     </form>
   </ion-content>
-</ion-modal-view>
+</ion-view>
