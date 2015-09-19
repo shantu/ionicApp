@@ -1,11 +1,46 @@
 <ion-view view-title="Orders">
-  <ion-content ng-init="loadOrders()">
-    <ion-list>
+<ion-tabs class="tabs-positive">
+  <ion-tab title="Order">
+   <ion-content>
+	<div><br><br></div>
+    <ion-list  ng-init="loadOrders()">
       <ion-item ng-repeat="notification in notifications" href="#/app/notifications/{{notification.OrderID}}">
-        <label>OrderID:</label>{{notification.OrderID}}<br>
-		<label>OrderDate:</label>{{notification.OrderDate}}<br>
-		<label>MembershipID:</label>{{notification.MembershipID}}<br>
+		<strong>Business Name:</strong>{{notification.MembershipBusinessName}}<br>
+        <strong>Order ID:</strong>{{notification.OrderID}}<br>
+		<strong>Order Date:</strong>{{notification.OrderDate}}<br>
+		<strong>Membership ID:</strong>{{notification.MembershipID}}<br>
       </ion-item>
     </ion-list>
-  </ion-content>
+   </ion-content>
+ </ion-tab>
+
+  <ion-tab title="Order-1">
+    <!-- Tab 2 content -->
+	<ion-content>
+	<div><br><br></div>
+    <ion-list  ng-init="loadOrders()">
+      <ion-item ng-repeat="notification in notifications" href="#/app/notifications/{{notification.OrderID}}">
+		<strong>Business Name:</strong>{{notification.MembershipBusinessName}}<br>
+        <strong>Order ID:</strong>{{notification.OrderID}}<br>
+		<strong>Order Date:</strong>{{notification.OrderDate}}<br>
+      </ion-item>
+    </ion-list>
+   </ion-content>
+  </ion-tab>
+
+  <ion-tab title="Order-2">
+    <!-- Tab 3 content -->
+	<ion-content>
+	<div><br><br></div>
+    <ion-list  ng-init="loadOrders()">
+      <ion-item ng-repeat="notification in notifications" href="#/app/notifications/{{notification.OrderID}}">
+		<strong>Business Name:</strong>{{notification.MembershipBusinessName}}<br>
+		<strong>Order Date:</strong>{{notification.OrderDate}}<br>
+		<strong>Membership ID:</strong>{{notification.MembershipID}}<br>
+      </ion-item>
+    </ion-list>
+   </ion-content>
+  </ion-tab>
+
+</ion-tabs>
 </ion-view>

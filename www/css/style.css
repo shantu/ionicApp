@@ -73,3 +73,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', end
 .logo {
 	text-align: center;
 }
+.top-padding {
+margin-top: 100px;
+}
