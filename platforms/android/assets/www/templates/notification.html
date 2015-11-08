@@ -1,5 +1,39 @@
-<ion-view view-title="Notification">
-  <ion-content>
-    <h1>Notification</h1>
+<ion-view view-title="Order Details">
+  <ion-content ng-init="loadOrderDetails()">
+    <div class="orderTle">
+		<h3>{{MembershipBusinessName}}</h3>
+		<strong>{{OrderID}}</strong>
+	</div>
+	<div ng-repeat="order in orderdetails">
+			<div class="card">
+				<div class="item item-divider">
+					{{order.ItemDesc}}
+					<label class="toggle toggle-assertive rightSide">
+						<input type="checkbox">
+							<div class="track">
+								<div class="handle"></div>
+							</div>
+					</label>
+				</div>
+				<div class="item item-text-wrap">
+					{{order.Quantity}}<br>
+					{{order.Price}}
+				</div>
+				<div class="item tabs tabs-secondary tabs-icon-left">
+					<a class="tab-item" href="#">
+					<i class="icon ion-bag"></i>
+					Delivered
+					</a>
+					<a class="tab-item" href="#">
+					<i class="icon ion-ios-location-outline"></i>
+					Locate
+					</a>
+					<a class="tab-item" href="#">
+					<i class="icon ion-ios-paper-outline"></i>
+					List
+					</a>
+				</div>
+			</div>	
+	</div>
   </ion-content>
 </ion-view>

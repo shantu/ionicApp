@@ -1,15 +1,41 @@
 <ion-view view-title="Order Details">
   <ion-content ng-init="loadOrderDetails()">
-    <h1>Order Details</h1>
-	<ion-list>
-        <label>OrderID:</label>	{{OrderID}}<br>
-		<label>MembershipBusinessName</label>	{{MembershipBusinessName}}<br>
-		
-		<ion-item ng-repeat="order in orderdetails">
-		<label>ItemDesc</label>	{{order.ItemDesc}}<br>
-		<label>Quantity:</label>{{order.Quantity}}<br>
-		<label>Price:</label>	{{order.Price}}<br>		
-		</ion-item>
-    </ion-list>
+    <div class="orderTle">
+		<h3>{{MembershipBusinessName}}</h3>
+		<strong>{{OrderID}}</strong>
+	</div>
+	<div ng-repeat="order in orderdetails">
+			<div class="card">
+				<div class="item item-divider">
+					{{order.ItemDesc}}
+					<span class="item-note">
+						Total order = {{order.Quantity}}<br>Total price = {{ order.Price * order.Quantity }}
+					</span>
+				</div>
+				<div class="item item-text-wrap">
+					<label>Remaining items:</label>
+					<div class="row">
+						<label class="col">
+							<span class="input-label">Quantity</span>
+							<input type="number" ng-model="Quantity" placeholder="{{order.Quantity}}" value="{{order.Quantity}}">
+						</label>
+						<label class="col">
+							<span class="input-label">Price</span>
+							<input type="number" ng-model="Price" placeholder="{{order.Price}}" value="{{order.Price}}">
+						</label>
+					</div>					
+				</div>
+				<div class="item tabs tabs-secondary tabs-icon-left">
+					<div class="tab-item " href="#">
+					Net Total = {{ Quantity * Price }}
+					</div>
+					<div class="tab-item "></div>
+					<a class="tab-item" href="#">
+					<i class="icon ion-log-out"></i>
+					Deliver
+					</a>
+				</div>
+			</div>	
+	</div>
   </ion-content>
 </ion-view>

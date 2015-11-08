@@ -74,5 +74,47 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', end
 	text-align: center;
 }
 .top-padding {
-margin-top: 100px;
+	margin-top: 100px;
+}
+.tab-item-active {
+	border-color: #387ef5 !important;
+	border-width: 2px 0 0 0 !important;
+	margin-top: -2px !important;
+	background-color:rgb(13, 114, 187);
+}
+.row1 {
+	font-size: 15px;
+	line-height: 18px;
+	font-family: "Franklin ITC",sans-serif;
+	font-weight: bold;
+	font-style: normal;
+}
+.row2 {
+	font-size: 12px;
+	line-height: 18px;
+	color: #07C;
+	font-style: italic;
+	font-family: "Franklin ITC Light",sans-serif;
+}
+.row3 {
+	color: #666;
+	font-size: 9px;
+	line-height: 18px;
+	font-family: "Franklin ITC Light",sans-serif;
+}
+.orderTle {
+	padding-left:10px;
+}
+.rightSide {
+	float:right;
+}
+.leftSide {
+	float:left;
+}
+.borderBtm {
+     border-bottom: 0px !important;
+	 height: 64px !important;
+}
+.orderDetails {
+	text-decoration: none;
 }

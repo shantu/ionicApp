@@ -1,7 +1,7 @@
 
 var IonicDemoApp = angular.module('starter.controllers', ['starter.services'])
 
-IonicDemoApp.controller('AppCtrl', function($scope, $ionicModal, $timeout ,$state) {
+IonicDemoApp.controller('AppCtrl', function($scope, $ionicModal, $timeout ,$state ,$ionicViewService) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -30,7 +30,10 @@ IonicDemoApp.controller('AppCtrl', function($scope, $ionicModal, $timeout ,$stat
     $scope.modal.show();
   };
 
-  $scope.close = function(data) { 
+  $scope.close = function(data) {
+		$ionicViewService.nextViewOptions({
+			disableBack: true
+		});  
 		$state.go('app.dashboard');
   };
   
